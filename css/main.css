@@ -1,0 +1,44 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    max-width: 800px;
+    margin: 0 auto; 
+    perspective: 1000px;
+}
+
+#content .memoryCard {
+    height:150px;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+#content img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+
+.memoryCard.flip {
+     transform: rotateY(180deg);
+}
+
+.frontImage {
+/*    z-index: -1;*/
+    transform: rotateY(180deg)
+}
+
